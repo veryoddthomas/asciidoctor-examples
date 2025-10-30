@@ -1,31 +1,62 @@
 = AsciiDoc Article Title
-Firstname Lastname <author@asciidoctor.org>
+Tom Zakrajsek <tzakrajsek@qdusa.com>
 3.0, July 29, 2022: AsciiDoc article template
-:toc:
+:toc: auto
+// left
+// right
+// preamble
+// macro
+:toclevels: 4
 :icons: font
 :url-quickref: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 
 Content entered directly below the header but before the first section heading is called the preamble.
 
-== First level heading
+== Heading Examples: First level heading
 
-This is a paragraph with a *bold* word and an _italicized_ word.
-
-.Image caption
-image::image-file-name.png[I am the image alt text.]
-
-This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
+This is a "normal" paragraph with a *bold* word and an _italicized_ word.
 
 === Second level heading
 
-.Unordered list title
+Body text under the second level heading
+
+==== Third level heading
+
+Body text under the third level heading
+
+===== Fourth level heading
+
+====== Fifth level heading
+
+There are only five (5) heading levels.
+
+
+== References
+
+This is another paragraph.  You can also include footnotes  You can also include footnotes.  footnote:[I am footnote text and will be displayed at the bottom of the article.  Click the number to return to the reference location.]
+
+This is a link to <<second-level-heading>>
+
+
+== Lists
+
+=== Unordered lists
+
+.Unordered list title (optional)
 * list item 1
 ** nested list item
 *** nested nested list item 1
 *** nested nested list item 2
 * list item 2
 
+=== Ordered lists
+.Ordered list title (optional)
+. ordered list item
+.. nested ordered list item
+. ordered list item
+
 This is a paragraph.
+
 
 .Example block title
 ====
@@ -46,7 +77,7 @@ Content in a listing block is subject to _verbatim_ *substitutions*.
 Listing block content is commonly used to preserve code input.
 ----
 
-===== Fourth level heading
+== Tables
 
 .Table title
 |===
@@ -59,13 +90,18 @@ Listing block content is commonly used to preserve code input.
 |Column 2, row 2
 |===
 
-====== Fifth level heading
+
+== Special block types
+
+=== Quote
 
 [quote, firstname lastname, movie title]
 ____
 I am a block quote or a prose excerpt.
-I am subject to normal substitutions.
+I am subject to normal substitutions, so things like *bold* and _italic_ work fine.
 ____
+
+=== Verse
 
 [verse, firstname lastname, poem title and more]
 ____
@@ -73,15 +109,12 @@ I am a verse block.
   Indents and endlines are preserved in verse blocks.
 ____
 
+
 == First level heading
 
 TIP: There are five admonition labels: Tip, Note, Important, Caution and Warning.
 
 // I am a comment and won't be rendered.
-
-. ordered list item
-.. nested ordered list item
-. ordered list item
 
 The text at the end of this sentence is cross referenced to <<_third_level_heading,the third level heading>>
 
@@ -115,3 +148,24 @@ An admonition block may also contain complex content.
 
 Another paragraph.
 ====
+
+
+
+
+== Image Gallery
+
+.Coding Horrors
+image::images/coding-horror.png[coding-horror.png]
+
+.Leading?
+image::images/dilbert-woodchuck.gif[dilbert-woodchuck.gif]
+
+.Understanding
+image::images/einstein.jpeg[einstein.jpeg]
+
+.Teamwork
+image::images/teamwork1.jpg[teamwork1.jpg]
+
+.Training
+image::images/training.jpg[training.jpg]
+

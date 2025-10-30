@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<meta name="author" content="Firstname Lastname">
+<meta name="author" content="Tom Zakrajsek">
 <title>AsciiDoc Article Title</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -439,8 +439,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>AsciiDoc Article Title</h1>
 <div class="details">
-<span id="author" class="author">Firstname Lastname</span><br>
-<span id="email" class="email"><a href="mailto:author@asciidoctor.org">author@asciidoctor.org</a></span><br>
+<span id="author" class="author">Tom Zakrajsek</span><br>
+<span id="email" class="email"><a href="mailto:tzakrajsek@qdusa.com">tzakrajsek@qdusa.com</a></span><br>
 <span id="revnumber">version 3.0,</span>
 <span id="revdate">July 29, 2022</span>
 <br><span id="revremark">AsciiDoc article template</span>
@@ -448,14 +448,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_first_level_heading">First level heading</a>
+<li><a href="#_heading_examples_first_level_heading">Heading Examples: First level heading</a>
 <ul class="sectlevel2">
-<li><a href="#_second_level_heading">Second level heading</a></li>
+<li><a href="#_second_level_heading">Second level heading</a>
+<ul class="sectlevel3">
+<li><a href="#_third_level_heading">Third level heading</a>
+<ul class="sectlevel4">
+<li><a href="#_fourth_level_heading">Fourth level heading</a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_references">References</a></li>
+<li><a href="#_lists">Lists</a>
+<ul class="sectlevel2">
+<li><a href="#_unordered_lists">Unordered lists</a></li>
+<li><a href="#_ordered_lists">Ordered lists</a>
+<ul class="sectlevel3">
+<li><a href="#_third_level_heading_2">Third level heading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_tables">Tables</a></li>
+<li><a href="#_special_block_types">Special block types</a>
+<ul class="sectlevel2">
+<li><a href="#_quote">Quote</a></li>
+<li><a href="#_verse">Verse</a></li>
+</ul>
+</li>
+<li><a href="#_first_level_heading">First level heading</a></li>
 <li><a href="#_first_level_heading_2">First level heading</a></li>
-<li><a href="#_first_level_heading_3">First level heading</a></li>
 <li><a href="#_admonitions">Admonitions</a></li>
+<li><a href="#_image_gallery">Image Gallery</a></li>
 </ul>
 </div>
 </div>
@@ -468,24 +495,52 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_first_level_heading">First level heading</h2>
+<h2 id="_heading_examples_first_level_heading">Heading Examples: First level heading</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is a paragraph with a <strong>bold</strong> word and an <em>italicized</em> word.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="image-file-name.png" alt="I am the image alt text.">
-</div>
-<div class="title">Figure 1. Image caption</div>
-</div>
-<div class="paragraph">
-<p>This is another paragraph.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+<p>This is a "normal" paragraph with a <strong>bold</strong> word and an <em>italicized</em> word.</p>
 </div>
 <div class="sect2">
 <h3 id="_second_level_heading">Second level heading</h3>
+<div class="paragraph">
+<p>Body text under the second level heading</p>
+</div>
+<div class="sect3">
+<h4 id="_third_level_heading">Third level heading</h4>
+<div class="paragraph">
+<p>Body text under the third level heading</p>
+</div>
+<div class="sect4">
+<h5 id="_fourth_level_heading">Fourth level heading</h5>
+<div class="sect5">
+<h6 id="_fifth_level_heading">Fifth level heading</h6>
+<div class="paragraph">
+<p>There are only five (5) heading levels.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is another paragraph.  You can also include footnotes  You can also include footnotes.  <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>This is a link to <a href="#second-level-heading">[second-level-heading]</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lists">Lists</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_unordered_lists">Unordered lists</h3>
 <div class="ulist">
-<div class="title">Unordered list title</div>
+<div class="title">Unordered list title (optional)</div>
 <ul>
 <li>
 <p>list item 1</p>
@@ -512,6 +567,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_ordered_lists">Ordered lists</h3>
+<div class="olist arabic">
+<div class="title">Ordered list title (optional)</div>
+<ol class="arabic">
+<li>
+<p>ordered list item</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>nested ordered list item</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>ordered list item</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p>This is a paragraph.</p>
 </div>
@@ -532,7 +608,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="_third_level_heading">Third level heading</h4>
+<h4 id="_third_level_heading_2">Third level heading</h4>
 <div id="id-for-listing-block" class="listingblock">
 <div class="title">Listing block title</div>
 <div class="content">
@@ -540,8 +616,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 Listing block content is commonly used to preserve code input.</pre>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_fourth_level_heading">Fourth level heading</h5>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tables">Tables</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Table title</caption>
 <colgroup>
@@ -565,13 +646,18 @@ Listing block content is commonly used to preserve code input.</pre>
 </tr>
 </tbody>
 </table>
-<div class="sect5">
-<h6 id="_fifth_level_heading">Fifth level heading</h6>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_special_block_types">Special block types</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_quote">Quote</h3>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
 <p>I am a block quote or a prose excerpt.
-I am subject to normal substitutions.</p>
+I am subject to normal substitutions, so things like <strong>bold</strong> and <em>italic</em> work fine.</p>
 </div>
 </blockquote>
 <div class="attribution">
@@ -579,6 +665,9 @@ I am subject to normal substitutions.</p>
 <cite>movie title</cite>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_verse">Verse</h3>
 <div class="verseblock">
 <pre class="content">I am a verse block.
   Indents and endlines are preserved in verse blocks.</pre>
@@ -590,11 +679,8 @@ I am subject to normal substitutions.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="_first_level_heading_2">First level heading</h2>
+<h2 id="_first_level_heading">First level heading</h2>
 <div class="sectionbody">
 <div class="admonitionblock tip">
 <table>
@@ -608,30 +694,13 @@ There are five admonition labels: Tip, Note, Important, Caution and Warning.
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>ordered list item</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>nested ordered list item</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>ordered list item</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>The text at the end of this sentence is cross referenced to <a href="#_third_level_heading">the third level heading</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_first_level_heading_3">First level heading</h2>
+<h2 id="_first_level_heading_2">First level heading</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This is a link to the <a href="https://docs.asciidoctor.org/home/">Asciidoctor documentation</a>.
@@ -738,17 +807,52 @@ The software you&#8217;re about to use is untested.
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_image_gallery">Image Gallery</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/coding-horror.png" alt="coding-horror.png">
+</div>
+<div class="title">Figure 1. Coding Horrors</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/dilbert-woodchuck.gif" alt="dilbert-woodchuck.gif">
+</div>
+<div class="title">Figure 2. Leading?</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/einstein.jpeg" alt="einstein.jpeg">
+</div>
+<div class="title">Figure 3. Understanding</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/teamwork1.jpg" alt="teamwork1.jpg">
+</div>
+<div class="title">Figure 4. Teamwork</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/training.jpg" alt="training.jpg">
+</div>
+<div class="title">Figure 5. Training</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. I am footnote text and will be displayed at the bottom of the article.
+<a href="#_footnoteref_1">1</a>. I am footnote text and will be displayed at the bottom of the article.  Click the number to return to the reference location.
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 3.0<br>
-Last updated 2025-09-13 14:02:06 -0700
+Last updated 2025-10-29 23:05:37 -0700
 </div>
 </div>
 </body>
