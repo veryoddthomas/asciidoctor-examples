@@ -1,6 +1,6 @@
-= AsciiDoc Article Title
+= AsciiDoc Example
 Tom Zakrajsek <tzakrajsek@qdusa.com>
-3.0, July 29, 2022: AsciiDoc article template
+1.0, Nov 3, 2025: AsciiDoc Example Document
 :toc: auto
 // left
 // right
@@ -8,6 +8,7 @@ Tom Zakrajsek <tzakrajsek@qdusa.com>
 // macro
 :toclevels: 4
 :icons: font
+:stem: 
 :source-highlighter: rouge
 :url-quickref: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 
@@ -16,6 +17,19 @@ Content entered directly below the header but before the first section heading i
 // Lines starting with // are comments and will not be rendered
 
 Source lines starting with `//` are comments and will not be rendered
+
+// NOTE: Requirements include:
+// gem install rouge
+// gem install asciidoctor-mathematical
+
+// Build environment for the asciidoctor-mathematical gem on ubuntu 24.04:
+// sudo apt install libpango1.0-dev gir1.2-pango-1.0
+// sudo apt install libharfbuzz-dev gir1.2-harfbuzz-0.0
+// sudo apt install gobject-introspection libgirepository1.0-dev
+// sudo apt install libxml2-dev jq
+// sudo apt install flex bison
+// sudo apt install libgdk-pixbuf2.0-dev
+// sudo gem install asciidoctor-mathematical
 
 == Heading Examples: First level heading
 
@@ -30,6 +44,9 @@ Body text under the second level heading
 Body text under the third level heading
 
 ===== Fourth level heading
+
+This text is #highlighted#
+
 
 ====== Fifth level heading
 
@@ -125,7 +142,30 @@ Sidebars contain aside text and are subject to normal *substitutions*.
 |===
 
 
-== Special block types
+== Block types
+
+=== Collapsible
+
+[%collapsible]
+====
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+in a piece of classical Latin literature from 45 BC, making it over 2000 years
+old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+Virginia, looked up one of the more obscure Latin words, consectetur, from a
+Lorem Ipsum passage, and going through the cites of the word in classical
+literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
+and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+"Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
+those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
+Malorum" by Cicero are also reproduced in their exact original form,
+accompanied by English versions from the 1914 translation by H. Rackham.
+
+====
 
 === Quote
 
@@ -170,6 +210,55 @@ echo "You're running $KERNEL on $CPU"
 Content in a listing block is subject to _verbatim_ *substitutions*.
 Listing block content is commonly used to preserve code input.
 ----
+
+== Equations
+
+https://asciimath.org/
+
+=== AsciMath (the default for STEM)
+
+.A block with a basic square root using AsciiMath
+[asciimath, id="myfirstequation"]
+++++
+sqrt(4) = 2
+
+sum_(i=1)^n i^3=((n(n+1))/2)^2
+++++
+
+The expression in the block above can also be written inline.
+
+stem:[sqrt(4) = 2]
+
+and
+
+stem:[sum_(i=1)^n i^3=((n(n+1))/2)^2]
+
+Water (stem:[H_2O]) is a critical component.
+
+A matrix can be written as stem:[[[a,b\],[c,d\]\]((n),(k))].
+
+[stem]
+++++
+P = P_0 * ( ( (A * T_"Rt" + B - K_"sot") / (K_"tot" - K_"sot")) -1 )
+++++
+
+=== latexmath:[\LaTeX]
+
+Inline Latex (or latexmath:[\LaTeX]) looks like: 
+
+latexmath:[C = \alpha + \beta Y^{\gamma} + \epsilon]
+
+A block of LaTex looks like:
+
+.A block of  LaTex 
+[latexmath]
+++++
+C = \alpha + \beta Y^{\gamma} + \epsilon
+
+\LaTeX
+++++
+
+This is a reference back to the first equation, <<myfirstequation>>.
 
 
 == Image Gallery
