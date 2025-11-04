@@ -13,6 +13,10 @@ Tom Zakrajsek <tzakrajsek@qdusa.com>
 
 Content entered directly below the header but before the first section heading is called the preamble.
 
+// Lines starting with // are comments and will not be rendered
+
+Source lines starting with `//` are comments and will not be rendered
+
 == Heading Examples: First level heading
 
 This is a "normal" paragraph with a *bold* word and an _italicized_ word.
@@ -32,12 +36,49 @@ Body text under the third level heading
 There are only five (5) heading levels.
 
 
+== Admonitions
+
+NOTE: *NOTE* - An admonition draws the reader's attention to auxiliary information.
+
+Here are the other built-in admonition types:
+
+IMPORTANT: *IMPORTANT* - Don't forget the children!
+
+TIP: *TIP* - Look for the warp zone under the bridge.
+
+CAUTION: *CAUTION* - Slippery when wet.
+
+WARNING: *WARNING* - The software you're about to use is untested.
+
+
+[NOTE]
+====
+An admonition block may also contain complex content.
+
+.A list
+- one
+- two
+- three
+
+Another paragraph.
+====
+
 == References
 
-This is another paragraph.  You can also include footnotes  You can also include footnotes.  footnote:[I am footnote text and will be displayed at the bottom of the article.  Click the number to return to the reference location.]
+=== Cross references
 
-This is a link to <<second-level-heading>>
+The text at the end of this sentence is cross referenced to <<_third_level_heading,the third level heading example>>
 
+=== External references
+
+This is a link to the https://docs.asciidoctor.org/home/[Asciidoctor documentation].
+It is listed inline.  This is an attribute reference that links to the
+{url-quickref}[AsciiDoc Syntax Quick Reference].
+It is using an attribute reference defined in the header.
+
+=== Footnotes
+
+This is another paragraph.  You can also include footnotes like this.footnote:[I am footnote text and will be displayed at the bottom of the article.  Click the number to return to the reference location.]
 
 == Lists
 
@@ -69,14 +110,6 @@ Content in an example block is subject to normal *substitutions*.
 Sidebars contain aside text and are subject to normal *substitutions*.
 ****
 
-==== Third level heading
-
-[#id-for-listing-block]
-.Listing block title
-----
-Content in a listing block is subject to _verbatim_ *substitutions*.
-Listing block content is commonly used to preserve code input.
-----
 
 == Tables
 
@@ -111,61 +144,32 @@ I am a verse block.
 ____
 
 
-
 === Code
+
+This is a source listing for bash.  It demonstrates the use of <_n_> callouts.
 
 [source, shell]
 ----
-#! /bin/bash
+#! /bin/bash <1>
  
 HOSTNAME=`uname -n`
 KERNEL=`uname -r`
 CPU=`uname -p`
 
-figlet -f digital Welcome to $HOSTNAME!
+figlet -f digital Welcome to $HOSTNAME! <2>
 echo "You're running $KERNEL on $CPU"
 ----
+<1> Hashbang is used to tell the shell which program to invoke
+<2> Will fail if figlet is not installed
 
-== First level heading
+=== Verbatim
 
-TIP: There are five admonition labels: Tip, Note, Important, Caution and Warning.
-
-// I am a comment and won't be rendered.
-
-The text at the end of this sentence is cross referenced to <<_third_level_heading,the third level heading>>
-
-== First level heading
-
-This is a link to the https://docs.asciidoctor.org/home/[Asciidoctor documentation].
-This is an attribute reference {url-quickref}[that links this text to the AsciiDoc Syntax Quick Reference].
-
-== Admonitions
-
-NOTE: An admonition draws the reader's attention to auxiliary information.
-
-Here are the other built-in admonition types:
-
-IMPORTANT: Don't forget the children!
-
-TIP: Look for the warp zone under the bridge.
-
-CAUTION: Slippery when wet.
-
-WARNING: The software you're about to use is untested.
-
-[NOTE]
-====
-An admonition block may also contain complex content.
-
-.A list
-- one
-- two
-- three
-
-Another paragraph.
-====
-
-
+[#id-for-listing-block]
+.Verbatim block title
+----
+Content in a listing block is subject to _verbatim_ *substitutions*.
+Listing block content is commonly used to preserve code input.
+----
 
 
 == Image Gallery
