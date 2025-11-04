@@ -8,6 +8,7 @@ Tom Zakrajsek <tzakrajsek@qdusa.com>
 // macro
 :toclevels: 4
 :icons: font
+:source-highlighter: rouge
 :url-quickref: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 
 Content entered directly below the header but before the first section heading is called the preamble.
@@ -109,6 +110,21 @@ I am a verse block.
   Indents and endlines are preserved in verse blocks.
 ____
 
+
+
+=== Code
+
+[source, shell]
+----
+#! /bin/bash
+ 
+HOSTNAME=`uname -n`
+KERNEL=`uname -r`
+CPU=`uname -p`
+
+figlet -f digital Welcome to $HOSTNAME!
+echo "You're running $KERNEL on $CPU"
+----
 
 == First level heading
 
