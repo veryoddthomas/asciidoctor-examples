@@ -1,1 +1,14 @@
 https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
+https://docs.asciidoctor.org/asciidoc/latest/text/
+https://docs.asciidoctor.org/asciidoc/latest/blocks/collapsible/
+https://docs.asciidoctor.org/asciidoc/latest/sections/titles-and-levels/
+https://docs.asciidoctor.org/asciidoc/latest/attributes/wrap-values/
+https://docs.asciidoctor.org/asciidoc/latest/macros/footnote/
+https://docs.asciidoctor.org/asciidoc/latest/stem/
+
+https://docs.asciidoctor.org/asciidoctor/latest/migrate/ms-word/
+
+https://asciimath.org/
+
+https://docs.asciidoctor.org/asciidoc/latest/blocks/discrete-headings/
+

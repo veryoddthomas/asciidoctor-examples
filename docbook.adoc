@@ -1,0 +1,15 @@
+
+sudo apt update
+sudo apt install docbook
+sudo apt install docbook-xsl
+sudo apt install docbook-xsl-doc-pdf
+
+asciidoctor -b docbook5 -o - test.adoc |
+pandoc --from=docbook --to=html --standalone \
+       --mathjax="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" \
+       -o book.html
+
+asciidoctor -b docbook5 -o - example.adoc |
+pandoc --from=docbook --to=html --standalone \
+       --mathjax="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" \
+       -o book.html

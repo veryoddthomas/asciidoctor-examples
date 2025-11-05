@@ -244,7 +244,7 @@ P = P_0 * ( ( (A * T_"Rt" + B - K_"sot") / (K_"tot" - K_"sot")) -1 )
 
 === latexmath:[\LaTeX]
 
-Inline Latex (or latexmath:[\LaTeX]) looks like: 
+Inline LaTex (or latexmath:[\LaTeX]) looks like: 
 
 latexmath:[C = \alpha + \beta Y^{\gamma} + \epsilon]
 
@@ -255,7 +255,6 @@ A block of LaTex looks like:
 ++++
 C = \alpha + \beta Y^{\gamma} + \epsilon
 
-\LaTeX
 ++++
 
 This is a reference back to the first equation, <<myfirstequation>>.
