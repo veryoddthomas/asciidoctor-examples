@@ -1,0 +1,23 @@
+
+@import "https://fonts.googleapis.com/css?family=Play:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
+@import "https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css";
+
+/* <link rel="preconnect" href="https://fonts.googleapis.com"> */
+/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
+/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime"> */
+/* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play"> */
+
+
+h1, h2, h3, h4, h5, h6, #toctitle,
+.sidebarblock > .content > .title {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+h1   { font-family: 'Play', serif; font-weight: bold; }
+h2   { font-family: 'Play', serif; font-weight: bold; color: #b71234; }
+
+a:link { color: #1e1e1e; text-decoration: none; }
+a:visited { color: #1e1e1e; background-color: transparent; text-decoration: none; }
+a:hover { color: #b71234; background-color: transparent; text-decoration: underline; }
+a:active { color: #b71234; background-color: transparent; text-decoration: underline; font-weight: bold; }
+
