@@ -221,11 +221,15 @@ https://asciimath.org/
 [asciimath, id="myfirstequation"]
 ++++
 sqrt(4) = 2
+++++
 
+.A sum of cubes using AsciiMath
+[asciimath]
+++++
 sum_(i=1)^n i^3=((n(n+1))/2)^2
 ++++
 
-The expression in the block above can also be written inline.
+The expressions in the blocks above can also be written inline.
 
 stem:[sqrt(4) = 2]
 
