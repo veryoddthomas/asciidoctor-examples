@@ -270,9 +270,9 @@ comment - content which is not included in the output document
 
 == Multimedia
 
-image::dawn.jpg[block image,800,450]
+image::images/dawn.jpg[block image,800,450]
 
-Press image:reload.svg[reload,16,opts=interactive] to reload the page.
+Press image:images/reload.svg[reload,16,opts=interactive] to reload the page.
 
 video::movie.mp4[width=640,start=60,end=140,options=autoplay]
 
